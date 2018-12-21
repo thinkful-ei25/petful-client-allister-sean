@@ -10,17 +10,29 @@ export default function Pet(props) {
             <main>
                 <dl>
                     <dt>
-                        sex: {props.petToAdopt.sex}
+                        sex: 
                     </dt>
+                    <dd>
+                    {props.petToAdopt.sex}
+                    </dd>
                     <dt>
-                        age: {props.petToAdopt.age}
+                        age: 
                     </dt>
+                    <dd>
+                    {props.petToAdopt.age}
+                    </dd>
                     <dt>
-                        breed: {props.petToAdopt.breed}
+                        breed: 
                     </dt>
+                    <dd>
+                    {props.petToAdopt.breed}
+                    </dd>
                     <dt>
-                        story: {props.petToAdopt.story}
+                        story: 
                     </dt>
+                    <dd>
+                    {props.petToAdopt.story}
+                    </dd>
                 </dl>
                 <button onClick={() => props.onAdoptPet()}>Adopt</button>
             </main>
