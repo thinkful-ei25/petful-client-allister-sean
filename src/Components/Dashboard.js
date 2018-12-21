@@ -12,6 +12,7 @@ export class Dashboard extends React.Component {
     }
 
     render() { 
+        
         if (this.props.isDogLoading || this.props.isCatLoading) { 
             return <p>Loading...</p>
         }
