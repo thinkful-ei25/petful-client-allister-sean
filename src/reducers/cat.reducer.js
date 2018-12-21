@@ -3,13 +3,13 @@ import {
     FETCH_CAT_SUCCESS, 
     FETCH_CAT_ERROR, 
     ADOPT_CAT_ERROR
-} from '../actions/index.action'; 
+} from '../actions/cat.action'; 
 
 const initialState = { 
     cat : { 
         data : null, 
         error : null, 
-        loading : false
+        loading : true
     }
 }
 

@@ -3,13 +3,13 @@ import {
     FETCH_DOG_SUCCESS, 
     FETCH_DOG_ERROR,
     ADOPT_DOG_ERROR  
-} from '../actions/index.action'; 
+} from '../actions/dog.action'; 
 
 const initialState = { 
     dog : { 
         data : null, 
         error : null, 
-        loading : false
+        loading : true
     }
 }
 
@@ -32,7 +32,7 @@ export default function reducer(state=initialState, action) {
         
         return Object.assign({}, state, {dog: newDog}); 
     }
-    else if (action.type === ADOPT_CAT_ERROR) { 
+    else if (action.type === ADOPT_DOG_ERROR) { 
         const newDog = Object.assign({}, state.dog, { 
             loading: false, data: null, error: action.err}); 
         

@@ -41,8 +41,7 @@ export const adoptCat = () => (dispatch) => {
 }
 
 export const fetchCat = () => (dispatch) => { 
-    dispatch(fetchCatLoading); 
-
+    dispatch(fetchCatLoading()); 
     return fetch(`${API_BASE_URL}/cat`, { 
         method: 'GET'
     })

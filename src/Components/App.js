@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import '../App.css';
 import Dashboard from './Dashboard';
 
 class App extends Component {
@@ -29,16 +28,13 @@ class App extends Component {
     }
   }
 
-    
-      
-    
   render() {
     return (
       <div>
-        <Dashboard catToAdopt={this.state.cat} dogToAdopt={this.state.dog}></Dashboard>
+        <Dashboard></Dashboard>
       </div>
     );
   }
 }
 
-export default App;
+export default App; 
