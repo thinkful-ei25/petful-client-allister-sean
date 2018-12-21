@@ -22,12 +22,6 @@ export const adoptDogLoading = () => {
     type: ADOPT_DOG_LOADING
 }
 
-export const ADOPT_DOG_SUCCESS = 'ADOPT_DOG_SUCCESS'; 
-export const adoptDogSuccess = dog => { 
-    type: ADOPT_DOG_SUCCESS, 
-    dog
-}
-
 export const ADOPT_DOG_ERROR = 'ADOPT_DOG_ERROR'; 
 export const adoptDogError = err => { 
     type: ADOPT_DOG_ERROR, 
@@ -41,8 +35,9 @@ export const adoptDog = () => (dispatch) => {
         method: 'DELETE'
     })
         .then(res => res.json())
-        .then(data => dispatch(adoptDogSuccess(data)))
-        .catch(err => dispatch(fetchDogError(err))); 
+        //FETCH DOG IF ADOPTION SUCCESSFUL
+        .then(data => dispatch(fetchDog()))
+        .catch(err => dispatch(adoptDogError(err))); 
 }
 
 export const fetchDog = () => (dispatch) => { 

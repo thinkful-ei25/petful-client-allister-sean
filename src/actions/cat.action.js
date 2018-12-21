@@ -22,11 +22,6 @@ export const adoptCatLoading = () => {
     type: ADOPT_CAT_LOADING
 }
 
-export const ADOPT_CAT_SUCCESS = 'ADOPT_CAT_SUCCESS'; 
-export const adoptCatSuccess = cat => { 
-    type: ADOPT_CAT_SUCCESS, 
-    cat
-}
 
 export const ADOPT_CAT_ERROR = 'ADOPT_CAT_ERROR'; 
 export const adoptCatError = err => { 
@@ -35,14 +30,15 @@ export const adoptCatError = err => {
 }
 
 export const adoptCat = () => (dispatch) => { 
-    dispatch(adoptCatLoading); 
+    dispatch(adoptCatLoading()); 
 
     return fetch(`${API_BASE_URL}/cat`, { 
         method: 'DELETE'
     })
         .then(res => res.json())
-        .then(data => dispatch(adoptCatSuccess(data)))
-        .catch(err => dispatch(fetchCatError(err))); 
+        //FETCH CAT WHEN ADOPTION IS SUCCESSFUL
+        .then(data => dispatch(fetchCat()))
+        .catch(err => dispatch(adoptCatError(err))); 
 }
 
 export const fetchCat = () => (dispatch) => { 
