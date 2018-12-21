@@ -1,14 +1,21 @@
 import React from 'react';
+import '../styles/pet.css'; 
 
 export default function Pet(props) {
     if (!props.petToAdopt){ 
         return <p>Loading...</p>
     }
     return (
-        <section>
-            <header><h1>{props.petToAdopt.name}</h1> <img src={props.petToAdopt.imageURL} alt={props.petToAdopt.imageDescription}></img></header>
+        <section className="pet">
+            <header><h1 className="petName">{props.petToAdopt.name}</h1> 
+                <img 
+                    className="petImage" 
+                    src={props.petToAdopt.imageURL} 
+                    alt={props.petToAdopt.imageDescription}>
+                </img>
+            </header>
             <main>
-                <dl>
+                <dl className="petDescr">
                     <dt>
                         sex: 
                     </dt>
@@ -27,6 +34,7 @@ export default function Pet(props) {
                     <dd>
                     {props.petToAdopt.breed}
                     </dd>
+                    <br></br>
                     <dt>
                         story: 
                     </dt>
@@ -34,7 +42,7 @@ export default function Pet(props) {
                     {props.petToAdopt.story}
                     </dd>
                 </dl>
-                <button onClick={() => props.onAdoptPet()}>Adopt</button>
+                <button className="adopt" onClick={() => props.onAdoptPet()}>Adopt</button>
             </main>
         </section>
         

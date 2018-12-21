@@ -1,0 +1,44 @@
+.petImage{ 
+    max-width: 400px;
+    max-height: 300px;  
+    border: 10px solid darkblue; 
+}
+.petName{
+    text-align: center; 
+    font-size: 40px; 
+    margin-top:10px; 
+    margin-bottom:10px;  
+}
+.pet{ 
+    max-width: 400px; 
+    float:right; 
+    margin-right: 10%; 
+}
+
+.adopt{ 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-size: 25px; 
+    width: 50%; 
+    height: 100px; 
+    background-color: blueviolet;
+}
+.adopt:hover{ 
+    background-color: yellow;  
+    font-size: 45px; 
+}  
+
+dt {
+    font-size: 30px; 
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline;
+    padding-right: 15px;  
+  }
+  dd {
+    font-size: 25px; 
+    display: inline;
+    padding-right:15px; 
+    margin: 0;
+  }
