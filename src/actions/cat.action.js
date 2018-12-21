@@ -29,9 +29,6 @@ export const adoptCatError = err => ({
 }); 
 
 export const adoptCat = () => (dispatch) => { 
-
-    // dispatch(adoptCatLoading()); 
-
     return fetch(`${API_BASE_URL}/cat`, { 
         method: 'DELETE'
     })
