@@ -6,3 +6,5 @@ avilable for adoption.
 
 Here is a link to screenshots of the app https://drive.google.com/open?id=1DngEsNBiDFtK1oUgK6OF6U6FnGI7vhgE
 Here is a link to the deplyed version https://petful-client-allister-sean.herokuapp.com/
+
+TECH STACK: React, Redux
