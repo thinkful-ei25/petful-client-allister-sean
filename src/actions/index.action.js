@@ -24,5 +24,5 @@ export const actions = {
     FETCH_DOG_SUCCESS, 
     FETCH_DOG_ERROR,
     ADOPT_DOG_LOADING, 
-    ADOPT_CAT_ERROR
+    ADOPT_DOG_ERROR 
 }; 

@@ -1,32 +1,32 @@
 import {API_BASE_URL} from '../config'; 
 
 export const FETCH_CAT_LOADING = 'FETCH_CAT_LOADING'; 
-export const fetchCatLoading = () => { 
+export const fetchCatLoading = () => ({ 
     type: FETCH_CAT_LOADING
-}
+}); 
 
 export const FETCH_CAT_SUCCESS = 'FETCH_CAT_SUCCESS'; 
-export const fetchCatSuccess = cat => { 
+export const fetchCatSuccess = cat => ({ 
     type: FETCH_CAT_SUCCESS, 
     cat
-}
+}); 
 
 export const FETCH_CAT_ERROR = 'FETCH_CAT_ERROR'; 
-export const fetchCatError = err => { 
+export const fetchCatError = err => ({ 
     type: fetchCatError, 
     err
-}
+}); 
 
 export const ADOPT_CAT_LOADING = 'ADOPT_CAT_LOADING'; 
-export const adoptCatLoading = () => { 
+export const adoptCatLoading = () => ({ 
     type: ADOPT_CAT_LOADING
-}
+}); 
 
 export const ADOPT_CAT_ERROR = 'ADOPT_CAT_ERROR'; 
-export const adoptCatError = err => { 
+export const adoptCatError = err => ({ 
     type: ADOPT_CAT_ERROR, 
     err
-}
+}); 
 
 export const adoptCat = () => (dispatch) => { 
     dispatch(adoptCatLoading()); 
