@@ -2,7 +2,7 @@ import {API_BASE_URL} from '../config';
 
 export const FETCH_DOG_LOADING = 'FETCH_DOG_LOADING'; 
 export const fetchDogLoading = () => { 
-    type: FETCH_DOG_LOADING
+    type: FETCH_DgOG_LOADING
 }
 
 export const FETCH_DOG_SUCCESS = 'FETCH_DOG_SUCCESS'; 
@@ -15,6 +15,34 @@ export const FETCH_DOG_ERROR = 'FETCH_DOG_ERROR';
 export const fetchDogError = err => { 
     type: FETCH_DOG_ERROR, 
     err
+}
+
+export const ADOPT_DOG_LOADING = 'ADOPT_DOG_LOADING'; 
+export const adoptDogLoading = () => { 
+    type: ADOPT_DOG_LOADING
+}
+
+export const ADOPT_DOG_SUCCESS = 'ADOPT_DOG_SUCCESS'; 
+export const adoptDogSuccess = dog => { 
+    type: ADOPT_DOG_SUCCESS, 
+    dog
+}
+
+export const ADOPT_DOG_ERROR = 'ADOPT_DOG_ERROR'; 
+export const adoptDogError = err => { 
+    type: ADOPT_DOG_ERROR, 
+    err
+}
+
+export const adoptDog = () => (dispatch) => { 
+    dispatch(adoptDogLoading); 
+
+    return fetch(`${API_BASE_URL}/dog`, { 
+        method: 'DELETE'
+    })
+        .then(res => res.json())
+        .then(data => dispatch(adoptDogSuccess(data)))
+        .catch(err => dispatch(fetchDogError(err))); 
 }
 
 export const fetchDog = () => (dispatch) => { 
