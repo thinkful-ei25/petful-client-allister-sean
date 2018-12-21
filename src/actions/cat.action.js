@@ -22,7 +22,6 @@ export const adoptCatLoading = () => {
     type: ADOPT_CAT_LOADING
 }
 
-
 export const ADOPT_CAT_ERROR = 'ADOPT_CAT_ERROR'; 
 export const adoptCatError = err => { 
     type: ADOPT_CAT_ERROR, 
