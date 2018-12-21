@@ -29,18 +29,18 @@ export const adoptCatError = err => ({
 }); 
 
 export const adoptCat = () => (dispatch) => { 
-    dispatch(adoptCatLoading()); 
+
+    // dispatch(adoptCatLoading()); 
 
     return fetch(`${API_BASE_URL}/cat`, { 
         method: 'DELETE'
     })
-        .then(res => res.json())
-        //FETCH CAT WHEN ADOPTION IS SUCCESSFUL
-        .then(data => dispatch(fetchCat()))
+        .then(() => dispatch(fetchCat()))
         .catch(err => dispatch(adoptCatError(err))); 
 }
 
 export const fetchCat = () => (dispatch) => { 
+    console.log('hi')
     dispatch(fetchCatLoading()); 
     return fetch(`${API_BASE_URL}/cat`, { 
         method: 'GET'
